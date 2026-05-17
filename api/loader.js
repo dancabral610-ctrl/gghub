@@ -157,7 +157,7 @@ GG HUB © 2026
 <script>
 function copyScript(){
     const text =
-`loadstring(game:HttpGet("https://gghub-m4cc.vercel.app/api"))()`
+`loadstring(game:HttpGet("gghub-98ur.vercel.app/api"))()`
 
     navigator.clipboard.writeText(text)
 
