@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GG HUB</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.bg{
+position:absolute;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at center,
+rgba(255,0,0,0.2),
+transparent 70%);
+animation:pulse 5s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.2);}
+100%{transform:scale(1);}
+}
+
+.card{
+position:relative;
+width:500px;
+padding:35px;
+border-radius:25px;
+background:rgba(10,0,0,0.9);
+border:2px solid red;
+box-shadow:
+0 0 25px red,
+0 0 80px rgba(255,0,0,0.4);
+backdrop-filter:blur(12px);
+z-index:10;
+}
+
+.logo{
+font-size:50px;
+font-weight:bold;
+text-align:center;
+color:red;
+text-shadow:0 0 20px red;
+margin-bottom:10px;
+}
+
+.sub{
+text-align:center;
+color:#ccc;
+margin-bottom:30px;
+font-size:15px;
+}
+
+.scriptbox{
+background:#0a0a0a;
+border:1px solid red;
+padding:18px;
+border-radius:15px;
+font-size:13px;
+word-break:break-all;
+color:#ff5c5c;
+line-height:1.5;
+}
+
+.buttons{
+display:flex;
+gap:12px;
+margin-top:25px;
+}
+
+button{
+flex:1;
+padding:15px;
+border:none;
+border-radius:14px;
+font-size:15px;
+font-weight:bold;
+cursor:pointer;
+transition:0.25s;
+}
+
+.copy{
+background:red;
+color:white;
+}
+
+.copy:hover{
+transform:translateY(-2px);
+box-shadow:0 0 20px red;
+}
+
+.discord{
+background:#111;
+border:1px solid red;
+color:white;
+}
+
+.discord:hover{
+transform:translateY(-2px);
+box-shadow:0 0 20px red;
+}
+
+.footer{
+margin-top:20px;
+text-align:center;
+font-size:12px;
+color:#777;
+}
+
+.particles{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+}
+
+.particles span{
+position:absolute;
+display:block;
+width:4px;
+height:4px;
+background:red;
+border-radius:50%;
+animation:float 10s linear infinite;
+opacity:0.5;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh) scale(0);
+}
+100%{
+transform:translateY(-10vh) scale(1);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="particles" id="particles"></div>
+
+<div class="card">
+
+<div class="logo">GG HUB</div>
+
+<div class="sub">
+Best Blox Fruits Experience
+</div>
+
+<div class="scriptbox" id="script">
+loadstring(game:HttpGet("https://SEUSITE.vercel.app/api"))()
+</div>
+
+<div class="buttons">
+
+<button class="copy" onclick="copyScript()">
+Copy Script
+</button>
+
+<button class="discord"
+onclick="window.open('https://discord.gg/fNrB3zNDh6')">
+Discord
+</button>
+
+</div>
+
+<div class="footer">
+GG HUB © 2026
+</div>
+
+</div>
+
+<script>
+
+function copyScript(){
+
+const text =
+`loadstring(game:HttpGet("https://SEUSITE.vercel.app/api"))()`
+
+navigator.clipboard.writeText(text)
+
+alert("Script copied!")
+
+}
+
+for(let i=0;i<50;i++){
+
+let p=document.createElement("span")
+
+p.style.left=Math.random()*100+"%"
+p.style.animationDuration=
+(5+Math.random()*10)+"s"
+
+document.getElementById("particles")
+.appendChild(p)
+
+}
+
+</script>
+
+</body>
+</html>
